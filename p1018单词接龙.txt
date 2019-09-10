@@ -1,0 +1,155 @@
+#include<iostream>
+
+using namespace std;
+int n,ans(0);
+int use[30];
+string a[30];
+int can(string s,string m,int k)
+{
+	int len=s.length(); 
+	for(int i=0;i<k;i++)
+	  if(s[len-k+i]!=m[i])return 0;
+	return 1;
+}
+void add(string &s,string m,int k)
+{
+	int l=m.length();
+	for(int i=k;i<l;i++)
+	  s+=m[i];
+}
+void dfs(string now)
+{
+	int x=now.length();
+	ans=max(ans,x);
+	for(int i=1;i<=n;i++)
+	{
+		if (use[i]>=2) continue;
+		int l=a[i].length();
+		for(int j=1;j<=l;j++)
+		  if(can(now,a[i],j))
+		    {
+		    	string tem=now;
+		    	
+		    	add(tem,a[i],j);
+			    if(tem==now)continue;
+			    use[i]++;
+			    dfs(tem);
+			    use[i]--;
+			}
+	}
+}
+int main()
+{
+    string x;
+	cin>>n;
+	for(int i=1;i<=n;i++)cin>>a[i];
+	cin>>x;
+	dfs(x);
+	cout<<ans;
+}
+
+
+
+
+注意can中是0到k而不是1！！！！！！
+并且是<k
+是len-k+i
+
+字符串是从0开始的到n-1，一定别忘了
+for(int i=k;i<l;i++)
+所以这是i<l而没有=
+
+
+
+
+
+
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
+using namespace std;
+const int MAXN = 55;
+string word[MAXN];//记录题目所给单词
+int n,use[MAXN];//记录每个单词使用次数
+int ans = 0; //答案
+string begin;//开头字母
+
+bool can(string s,string m,int k)
+{
+    /*
+        现在我手上有两个串
+        然后我比较这两个串能不能接起来
+        就是某串的前几个字母是不是和另一个串的后几个相同
+        k是一个下标，代表现在手里这两个串是由原题中某两个串截取到k || 从k截取 
+    */
+    int lens = s.length();
+    for(int i = 0;i < k; i ++)
+        if(s[lens - k + i] != m[i])
+            return false;//接不起来QAQ不能在一起 
+    return true;
+}
+
+void add(string &s,string m,int k)//接龙 
+{
+    /*
+        k是从哪里开始不一样 就是从哪里开始接龙
+        字符串的优势出现了 支持+=这种类型的操作
+        比如 string a = 'abc';char b = 'd';
+        a += b;a = 'abcd';
+        这里就是把部分m接到s上 
+    */
+    int lenm = m.length();
+    for(int i = k; i < lenm; i ++)
+        s += m[i];
+    return;
+}
+
+void dfs(string now)
+{
+    /*
+        我现在手里有一个串
+        先看这个串是不是能更新答案
+        再看别的串能不能接上
+        注意每个串可以用两次 
+    */
+    int x = now.length();
+    ans = max(ans,x);
+    for(int i = 1; i <= n; i ++)
+    {
+        if(use[i] >= 2) continue;//用了两次了不能用了QAQ
+        int zl = word[i].length();
+        for(int j = 1; j <= zl; j ++)
+        {
+            //枚举一下看看能从哪里开始接龙 还是根本不能在一起QAQ 
+            if(can(now,word[i],j))//如果可以 
+            {
+                string temp = now;
+                /*关于为什么要复制：
+                    因为当前接龙不一定最优
+                    比如这个样例  touch可以接cheat也可以接choose
+                    看起来choose更优 然而对于整个题目 cheat更优
+                    醒醒，这是搜索，不要贪心 
+                */ 
+                add(temp,word[i],j);
+                if(temp == now) continue;//如果接龙和现在相同就算了 肯定不如不接优 
+                use[i] ++;//
+                dfs(temp);//从接龙之后的串继续搜 
+                use[i] --; //还原 
+            } 
+        } 
+    }
+    return;
+}
+
+int main()
+{
+	freopen("input.txt","r",stdin);
+    scanf("%d",&n);
+    for(int i = 1; i <= n; i ++)
+        cin >> word[i];
+    cin >> begin;//以这个字母为开头接龙 那就从它开始搜吧 
+    dfs(begin);
+    printf("%d\n",ans);
+    return 0;
+}

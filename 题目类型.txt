@@ -1,0 +1,233 @@
+cf 1016B  模拟，前缀和
+cf 1016A 模拟
+2018百度之星资格赛  1002 前缀和
+cf 1013D 并查集
+poj 1862 贪心
+cf 937C 模拟 数学
+Loj 1234  技巧打表
+hdu 2476 区间dp
+Gym - 100637A  前缀和
+hdu1556 前缀和进行区间更新，不用线段树  
+CodeForces - 295A 前缀和区间更新
+CodeForces - 612D 扫描线
+HDU - 5714 区间线段覆盖，前缀和，扫描线   2016百度之星复赛
+LightOJ 1422  区间dp
+poj 2955  区间dp
+hdu 2955 背包
+poj 1651 区间dp 
+hdu 2475 区间dp
+hdu 1849 Nim博弈
+poj 1088 dp
+poj 3660 Floyd算法
+CodeForces - 149D  区间dp
+ZOJ - 3469  区间dp
+HDU - 4283 区间dp
+HDU - 5115 区间dp
+hdu 2199  牛顿迭代法
+HDU - 4597  区间dp   对抗搜索
+POJ - 1269 计算几何 线段相交
+POJ - 2653 计算几何 线段相交
+POJ - 3304  计算几何  线段直线相交
+codeforces894B  思维
+CodeForces - 894C  构造
+NYOJ 737  区间dp
+HRBUST - 1818   区间dp  石子合并
+HRBUST - 1819   区间dp   环形石子合并
+NYOJ 746 整数划分(四)  区间dp  
+POJ - 3250 单调栈   入门题
+LeetCode --- 89  格雷码   也是腾讯的一个面试题
+CSU 1928  二分答案  寻找第k大的数
+POJ - 2796 单调栈
+HDU - 1506 单调栈
+ HDU - 3530 单调栈
+CodeForces - 251A 二分/单调栈
+FZU - 1894  单调队列
+CodeForces - 91B 单调队列
+POJ - 2823  单调队列
+HDU - 3706  单调队列
+POJ - 2019 二维RMQ/ST表
+HYSBZ - 1699 一维RMQ（ST表） 模板例题
+洛谷 P3865 一维ST表RMQ
+HDU - 3486  一位ST表RMQ+枚举
+CodeForces - 253D 预处理 交替枚举
+HDU - 2430 单调队列
+UVA - 11988 数组模拟链表
+ HDU - 1276 模拟
+HDU - 2120 并查集判环 入门题
+CodeForces - 699D  并查集判环
+CodeForces - 859E 并查集判环 数学
+HDU - 3560 并查集（判环）
+LightOJ - 1030 期望
+LightOJ - 1038 期望
+LightOJ - 1027 期望
+LightOJ 1104  概率  同一天生日问题
+LightOJ 1079  概率/背包
+LightOJ - 1248 期望  掷骰子次数问题
+LightOJ - 1265  概率
+CodeForces - 540D  期望dp
+ CodeForces - 398B  期望dp
+HDU - 3853 期望dp
+51Nod - 1717 水题
+计蒜客 Rake It In  2017南宁区域赛   对抗搜索
+POJ-2096  期望dp
+HDU - 5984  期望/猜结论
+HDU - 1284  数学/背包/母函数打表
+LightOJ - 1284 概率
+LightOJ - 1317 期望
+HDU - 1085  母函数/背包
+Gym - 101411K 期望
+HDU - 6380 并查集/思维 2018百度之星初赛B
+HDU - 6385 思维  2018百度之星初赛
+zjtu oj  1555   贝叶斯公式
+POJ - 1751 最小生成树 入门题
+poj 2485 最小生成树 求最小生成树中的最大边
+POJ - 1258 最小生成树 入门题
+CodeForces - 1011E/Wannafly挑战赛22A  数论 贝祖定理
+HDU - 5512  数论/博弈  贝祖定理
+bzoj - 2257  最大公约数和最小公倍数/贝祖定理
+HDU - 1710 二叉树前序中序后序遍历
+UVA - 1395 最小生成树 求路径中最长边和最短边的差
+poj 3723 最大生成树
+HDU - 6383 二分答案 2018百度之星初赛B轮
+HDU - 6374 简单题  2018百度之星初赛A轮
+HDU - 6375  模拟  2018百度之星初赛A轮
+hdu 6376 贪心,分类讨论  2018百度之星初赛A轮
+HDU - 6377 dp  2018百度之星初赛A轮
+HDU - 1520 树形dp 入门题
+Another Crisis UVA - 12186  树形dp
+POJ - 2436  二进制枚举
+CodeForces - 550B  二进制枚举
+HDU - 6344 状压dp  2018百度之星资格赛
+CodeForces - 873B 前缀和 技巧
+CodeForces - 276D 构造 思维
+CodeForces - 482A 构造 思维
+CodeForces - 534A 构造 思维
+CodeForces 468A 构造 思维
+CodeForces - 430A 思路
+CodeForces - 452B 枚举 思维
+CodeForces - 589B 暴力、枚举/思路
+2013提高组D1-转圈游戏  快速幂 思想
+HDU - 1538  博弈论  海盗分金
+2013提高组D2-积木大赛  思维
+2013提高组D2-花匠  贪心
+CodeForces - 477B 构造 数学
+HDU - 1798 几何 求两圆相交面积模板题
+POJ - 2546  几何 求两圆相交面积模板题
+codevs 1191  并查集妙用
+CodeForces - 401C 构造 贪心
+CodeForces - 508E 贪心 模拟
+CodeForces - 534D 贪心
+HDU - 3791  二叉搜索树构建 概念题
+CodeForces - 1025B  数论 技巧
+CodeForces - 1025C 思维
+CodeForces - 1025D 区间dp（树形）
+UVA - 10791 数论 唯一分解定理 和最小的LCM
+2017 南宁区域赛 The Chosen One   思维 java大数
+2017 南宁区域赛 Rearrangement 规律 分类讨论 思维
+HDU - 1159 LCS典型例题 
+CodeForces - 163A DP LCS变形
+hdu 2089  暴力/数位dp模板题
+hdu 3555 数位dp模板题
+HDU - 6148 数位dp简单变式   2017百度之星复赛
+CodeForces - 706C  dp
+CodeForces - 344B  思维
+CodeForces - 344C 思维
+CodeForces - 344D 思维
+CodeForces - 977F  dp  技巧
+UVA - 11292  贪心
+2018第九届蓝桥杯B组决赛题解第三题 格雷码 位运算
+HDU - 4734  数位dp
+CodeForces - 463D  dp  多个序列的最长公共子序列LCS
+HDU - 5791 dp  LCS变式
+CodeForces - 730G  模拟
+POJ - 3252  数位dp
+HYSBZ - 1026 数位dp
+牛客练习赛8  约数个数的和 
+牛客练习赛25  因数个数和
+LightOJ - 1098  数论  求1到n除了本身和1的约数和
+HYSBZ - 1257 整除分块
+洛谷 P3935 Calculating  整除分块
+牛客练习赛8  储物点的距离  前缀和深入应用
+hdu 4135 容斥典例
+POJ - 2407  容斥例题
+HDU - 1796 容斥典例
+牛客练习赛8  集合中的质数 容斥  hdu1796改编
+CodeForces - 1029A 码力题
+CodeForces - 1029D 数学 思维 同余
+CodeForces - 1023A 码力题 模糊匹配
+CodeForces - 1023E 交互 模拟dfs
+CodeForces - 984D 区间dp  思维
+UVA - 11729  贪心
+HDU - 3652  数位dp
+POJ - 3903 LIS的nlogn解法 典例
+CodeForces - 578A  思维
+CodeForces - 682A  思维 取余
+CodeForces - 682B  思维
+HDU - 1160  LIS变式 路径记录
+UVA - 10534 最长先增后减序列nlogn方法求
+CSU - 1120  LICS模板题
+HDU - 1087 带权LIS 简单
+UVA - 11790  带权LIS
+CodeForces - 149B  码力题
+UVA - 481  LIS的nlogn解法+路径打印  典例
+洛谷 P1439 LCS转LIS的做法 nlogn
+NYOJ760 LCS转LIS的做法 nlogn
+HDU - 4028  dp map离散化 思维
+HDU - 1166  线段树 单点更新 区间求和 模板题
+HDU - 1754  线段树 单点更新 区间最值 模板题
+POJ - 3468 线段树 区间更新 区间求和  模板题
+CodeForces - 791C  模拟 码力题
+POJ - 2528 线段树 重复染色 离散
+CodeForces - 237B  码力题
+HDU - 1698 线段树 区间更新 （懒标记不是加上了，而是修改这个值）模板题
+Count the Colors ZOJ - 1610 线段树 区间染色  暴力
+POJ - 3264  线段树 区间最大值和最小值的差 开两棵树
+HDU - 4027 线段树 区间更新 区间求和 无法打懒标记 巧优化
+CodeForces - 141B  码力题
+CodeForces - 268B 思维 数学
+CodeForces - 842B 几何 较简单
+牛客网  Wannafly挑战赛23A  尺取 码力题
+CodeForces - 189A  dp
+CodeForces - 1005A  码力题
+CodeForces - 189C  思维
+UVA - 11300 思维 中位数
+HDU - 2211  数学 类约瑟夫环
+HDU - 1540  线段树 区间合并
+CodeForces - 1004B  构造 思维
+UVALive(LA) - 3708  思维 比例扩大+下取整
+HDU - 5643  约瑟夫环变式
+HDU - 2925 约瑟夫环 
+CodeForces - 1003B  构造 思维 码力
+UVA - 10881  思维 数组映射 排序技巧
+CodeForces - 1000A 思维
+CodeForces - 1000B 思维
+CodeForces - 1037A 思维 数学
+CodeForces - 1037B 思维
+CodeForces - 1037C 思维
+CodeForces - 1037D 码力
+HDU - 1402  高精乘fft加速/Java大数
+CodeForces - 997A 思维
+codeforces 1040B 思维 枚举
+CodeForces - 997B  打表
+CodeForces - 998A  思维
+CodeForces - 607B  区间dp
+CodeForces - 998B  贪心+思维
+CodeForces - 776C  前缀和+map
+计蒜客 2018徐州网络赛 Characters with Hash   简单模拟 有坑
+计蒜客 2018徐州网络赛F  Features Track      map 有坑
+CodeForces - 1036C  数位dp裸题
+CodeForces - 1036A  简单题 思维
+CodeForces - 1036B  思维
+CodeForces - 1036D  贪心
+POJ - 2299  求逆序对数  树状数组 离散化/归并排序
+POJ - 3067  树状数组 思维
+CodeForces - 761C  思维 暴力
+poj-3734 Blocks 矩阵快速幂(模板题) 
+51Nod - 1137   矩阵乘法 
+POJ - 3070  矩阵快速幂 模板题
+poj 2481  树状数组
+ACM-ICPC 2018 焦作赛区网络预赛 I. Save the Room  简单思维
+hdu 2276 矩阵快速幂
+ACM-ICPC 2018 焦作赛区网络预赛 L. Poor God Water BM/矩阵快速幂
+ACM-ICPC 2018 焦作赛区网络预赛 G. Give Candies 欧拉降幂/指数循环节
+CodeForces - 1030B Vasya and Cornfield  几何 判断点在矩形内

@@ -1,0 +1,45 @@
+#include<iostream>
+#include<algorithm>
+#include<cstring>
+using namespace std;
+int n,ans(0);
+int king[100];
+void dfs(int x)
+{
+	if(x>n) 
+	{
+		ans++;
+	    return;
+    }  
+    for(int i=1;i<=n;i++)
+    {
+    	king[x]=i;
+    	int flag=1;
+		for(int j=1;j<x;j++)
+    	  if(king[j]==i||abs(j-x)==abs(king[j]-king[x]))
+    	  {
+    	  	flag=0;
+    	  	break;
+		  }
+	if(flag) dfs(x+1);	
+	}
+}
+int main()
+{
+	cin>>n;
+	memset(king,0,sizeof(king));
+	
+	dfs(1);
+	cout<<ans;
+}
+
+
+
+
+
+
+
+1.对此问题，只需要管行或者是列就好了，只管行的话，列完全可以按升序排列
+2.怎么控制斜方向上
+abs(j-x)==abs(king[j]-king[x])
+水平方向上的差距和竖直方向上的差距相等，那么就是在同一斜方向上了

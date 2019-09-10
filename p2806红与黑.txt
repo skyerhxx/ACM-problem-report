@@ -1,0 +1,53 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+int ans;
+int b[30][30],a[30][30];
+int w,h,x0,y0;
+char x;
+void doit(int x,int y)
+{
+	if(x<1||x>h||y<1||y>w) return;
+	if(a[x][y]==0||b[x][y]==1)return;//b数组是存这个点是否已经走过 
+	b[x][y]=1;
+	ans++;
+	doit(x-1,y);
+	doit(x,y-1);
+	doit(x+1,y);
+	doit(x,y+1); 
+}
+int main()
+{
+
+	while(cin>>w>>h)
+	{
+		if(w==0&&h==0) return 0;
+		memset(b,0,sizeof(b));
+		memset(a,0,sizeof(a));
+		ans=0;
+		for(int i=1;i<=h;i++)
+		  for(int j=1;j<=w;j++)
+		  {
+		  	cin>>x;
+		  	switch (x)
+		  	{
+		  		case'.':a[i][j]=1;
+		  		        break;
+		  		case'#':break;
+		  		case'@':x0=i;y0=j;
+		  		        break;
+		  		default:break;
+		    }
+		  }
+
+	doit(x0-1,y0);
+	doit(x0,y0-1);
+	doit(x0+1,y0);
+	doit(x0,y0+1); 
+	cout<<ans+1<<"\n"; //+1是加上起始点 
+		  
+	 } 
+}
+
+典型的广搜
+类似于走迷宫，搜四个方向

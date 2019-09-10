@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<iostream>
+using namespace std;
+int main()
+{
+  int n, i, s=0;
+  cin>>n; 
+  for(i=1;;i++)
+  {
+    s+=i;
+    if(s>=n) break;     
+  }//看出所在的行i 
+  int k;
+  k=i-(s-n);//k是分子   s-n是确定在这一行的第几个位置 
+  if(i%2==0) cout<<k<<'/'<<(i+1-k);
+  else	           
+    cout<<i-k+1<<'/'<<k;
+
+return 0;
+}
+
+
+
+
+
+奇偶性的判断是因为偶数是斜向下走，奇数是斜向上走所以这两种选择分子分母正好反着

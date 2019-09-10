@@ -1,0 +1,132 @@
+P1327回文词
+
+
+描述
+回文词是一种对称的字符串——也就是说，一个回文词，从左
+到右读和从右到左读得到的结果是一样的。任意给定一个字符串，
+通过插入若干字符，都可以变成一个回文词。你的任务是写一个程
+序，求出将给定字符串变成回文词所需插入的最少字符数。 
+比如字符串“Ab3bd”，在插入两个字符后可以变成一个回文
+词（“dAb3bAd”或“Adb3bdA”）。然而，插入两个以下的字符无
+法使它变成一个回文词。
+
+格式
+
+输入格式
+第一行包含一个整数N，表示给定字符串的长度，3<=N<=5000
+第二行是一个长度为N的字符串，字符串由大小写字母和数字
+构成。
+
+输出格式
+一个整数，表示需要插入的最少字符数。
+
+样例1
+
+样例输入1
+5
+Ab3bd
+
+样例输出1
+2
+
+限制
+各个测试点1s
+
+来源
+IOI 2000
+by Zossin
+
+
+
+
+
+#include <iostream>
+#include <cstdio>
+#include<mem.h>
+using namespace std;
+short f[5100][5100];
+char str[5100];
+int main()
+{
+	std::ios::sync_with_stdio(false);
+//	freopen("input.txt","r",stdin);
+    
+    int ans,n,i,j;
+    ans=0;
+    cin>>n;
+    cin>>str+1;
+    memset(f,0,sizeof(f));
+    
+  for(i=1;i<=n-1;i++)
+     for(j=n;j>=i+1;j--){
+       if(str[i]==str[j]) 
+	   f[i][j]=f[i-1][j+1]+1;
+       	
+	      else f[i][j]=max(f[i-1][j],f[i][j+1]);   
+   }
+   ans=n-2*f[1][2];
+   for(i=1;i<=n-1;i++){ 
+     if(ans>n-2*f[i][i+1])ans=n-2*f[i][i+1];
+     if(ans>n-2*f[i][i+2]-1)ans=n-2*f[i][i+2]-1; 
+   } 
+
+   cout<<ans<<endl;
+	   return 0;
+}
+
+
+
+
+f[i,j]表示a[1..i]这一段与a[n..i+1]这一段的最大公共子序列
+犯了一个巨大的错误，c语言的数组，字符串是从0开始的，也就是说你读入的第一个字是s[0]而不是s[1]，cin>>str+1只适用于char而不能string
+
+最后乘2是因为求的是公共子序列，前一半和后一半都有，长度减去两个
+f[i][i+1]与f[i][i+2]是考虑了最中间一个的情况
+
+
+其实本题与合唱队形很相似
+可以先将字符串反转过来，再求最长公共子序列
+# include<cstdio>  
+# include<iostream>  
+# include<algorithm>  
+# include<cstring>  
+# include<string>  
+# include<cmath>  
+# include<queue>  
+# include<stack>  
+# include<set>  
+# include<map>  
+  
+using namespace std;  
+  
+# define inf 999999999  
+# define MAX 5000+4  
+  
+int n;  
+char s1[MAX];  
+char s2[MAX];  
+int dp[MAX][MAX];  
+  
+void solve()  
+{  
+    for ( int i = 1;i <= n;i++ )    
+        for ( int j = 1;j <= n;j++ )  
+            if ( s1[i] == s2[j] )  
+                dp[i][j] = dp[i-1][j-1]+1;  
+            else  
+                dp[i][j] = max( dp[i-1][j],dp[i][j-1] );  
+}  
+  
+int main(void)  
+{  
+  cin>>n;   
+        cin>>s1+1;// s1从1开始输入  
+		for ( int i = 1;i <= n;i++ )    
+            s2[i] = s1[n+1-i];   
+        solve();  
+        cout<<n-dp[n][n]<<endl;  
+      
+    return 0;  
+}  
+
+

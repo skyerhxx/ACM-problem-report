@@ -1,0 +1,27 @@
+表达方式的隐约使得读题很容易先容易中迷茫的状态
+
+只需统计每个人的花名册人数，只要超过了k即可，然后累加超过k的人数，最后输出
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <algorithm>
+#include <iostream>
+using namespace std;
+int main() {
+
+   int n,k,x,s=0,sum;
+   cin>>n>>k;
+   for(int i=1;i<=n;i++) 
+     { 
+	 cin>>x;sum=1;
+	 while(x!=0) {
+	 	cin>>x;sum++;
+	 }  
+	 	if (sum>k) {
+	s++;}   	
+	 }
+	cout<<s<<"\n";
+	return 0;
+}

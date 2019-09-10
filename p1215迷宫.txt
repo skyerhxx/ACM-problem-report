@@ -1,0 +1,71 @@
+#include<iostream>
+#include<queue>
+#include<cstring>
+using namespace std;
+int ste[4][2]={{-1,0},{1,0},{0,-1},{0,1}};
+int n;
+int a[20][20];
+int visit[20][20];
+struct Node
+{
+	int x,y,step;
+	Node(int x1,int y1,int step1):x(x1),y(y1),step(step1){} 
+};
+int bfs()
+{
+	Node node(1,1,0);
+	queue<Node> q;
+	//while(!q.empty()) q.pop(); //队列非空就删除第一个元素   最终将队列清空
+	q.push(node);//将初始节点node入队
+	while(!q.empty())
+	{
+		node=q.front();//获得队首节点
+		q.pop();//队首节点出队
+		
+		if(node.x==n && node.y==n) 
+		  return node.step;
+		visit[node.x][node.y]=1;//标记访问过
+		for(int i=0;i<4;i++)
+		{
+			int x=node.x+ste[i][0];
+			int y=node.y+ste[i][1];
+			if (x>0 &&x<=n &&y>0&&y<=n&&visit[x][y]==0&&a[x][y]==0)
+			{
+				visit[x][y]=1;
+				Node next(x,y,node.step+1);
+				q.push(next); 
+			 } 
+		 } 
+		 
+	 } 
+	return -1;
+}
+int main()
+{
+
+	int t,q; 
+	char x;
+	cin>>t;
+	for(int q=1;q<=t;q++)
+	{
+		cin>>n;
+		memset(a,0,sizeof(a));
+		for(int i=1;i<=n;i++)
+		  for(int j=1;j<=n;j++) 
+		  {
+		  	cin>>x;
+		  	if(x=='#')a[i][j]=1;
+		  }
+		if(bfs()==-1) cout<<"NO";else cout<<"YES";
+	}
+
+return 0;
+} 
+
+
+
+
+
+广搜用队列很规范
+注意学习使用queue
+在处理边界时，0<x,y<=n
